@@ -1,0 +1,249 @@
+
+.Hero {
+    background: linear-gradient(180deg, #0f0d12, #0a080c 40%); /* Changed gradient */
+    padding: 200px 80px 110px 80px;
+    position: relative; /* For background animation */
+    min-height: 100vh; /* Make it full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    text-align: center;
+    overflow: hidden; /* Hide overflow for animations */
+}
+
+@keyframes fadeInHero {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.heroBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind content */
+    pointer-events: none; /* Allow clicks through */
+}
+
+.heroBg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire container */
+}
+.heroBlock::before,
+.Block.featuresBlock::before,
+.Block.solutionsBlock::before,
+.Block.joinBlock::before {
+    background: linear-gradient(to top, #161418, transparent);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    bottom: 0%;
+    left: 0%;
+}
+
+.Block.featuresBlock::before {
+    height: 500px;
+}
+.subHead,
+.heading,
+.desc,
+.links {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.7s ease-out forwards; /* Common animation */
+}
+.subHead {
+    color: #998afb;
+    text-transform: uppercase;
+    font-size: 14px;
+    animation-delay: 0.2s;
+}
+
+.heading {
+    font-size: 64px;
+    margin-top: 25px;
+    font-weight: 550;
+    line-height: 1.05em;
+    animation-delay: 0.4s;
+}
+
+.blockHeading {
+    font-size: 48px;
+}
+
+.desc {
+    color: grey;
+    font-weight: 550;
+    max-width: 635px;
+    font-size: 18px;
+    line-height: 1.5em;
+    margin: 18px 0px;
+    animation-delay: 0.6s;
+}
+
+.blockDesc {
+    margin: 18px 0px 0px 0px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 18px;
+    animation-delay: 0.8s;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.heading {
+    font-size: 64px;
+    
+    font-weight: 550;
+    line-height: 1.05em;
+   
+    margin: 0 auto;
+    /* animation: typing 3s steps(30) 1s 1 normal both,
+                blink-caret 0.75s step-end infinite; */
+    
+}
+
+@keyframes typing {
+    from { width: 0; } /* Start hidden */
+    to { width: 100%; } /* Expand to full width */
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+
+
+.links.soonLinks {
+    justify-content: initial;
+}
+
+.heroImg {
+    display: flex;
+    position: relative;
+    max-width: 1100px;
+    margin: 90px 0px;
+}
+
+.heroImg.soonImg {
+    max-width: 100%;
+}
+
+.heroImg::before {
+    background: linear-gradient(to top, #0a080c, transparent);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    left: 0%;
+}
+
+.heroImg img {
+    width: 100%;
+}
+
+.logos div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    gap: 65px;
+}
+
+.logos div img {
+    width: 130px;
+}
+
+@media(max-width: 980px) {
+    .heading {
+        font-size: 55px;
+    }
+}
+
+@media(max-width: 900px) {
+    .logos div {
+        gap: 45px;
+    }
+
+    .logos div img {
+        width: 115px;
+    }
+}
+
+@media(max-width: 670px) {
+    .heading {
+        font-size: 45px;
+    }
+
+    .Hero {
+        padding: 200px 50px 110px 50px;
+    }
+}
+
+@media(max-width: 500px) {
+    .heading {
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 460px) {
+    .Hero {
+        padding: 200px 35px 110px 35px;
+    }
+}
+
+    .logos img {
+        opacity: 0;
+        animation: fadeInLogos 0.5s ease forwards;
+    }
+
+    .logos img:nth-child(1) {
+        animation-delay: 0.5s;
+    }
+
+    .logos img:nth-child(2) {
+        animation-delay: 0.7s;
+    }
+
+    .logos img:nth-child(3) {
+        animation-delay: 0.9s;
+    }
+
+    .logos img:nth-child(4) {
+        animation-delay: 1.1s;
+    }
+    @keyframes fadeInLogos {
+        to {
+            opacity: 1;
+        }
+    }
+.heroImg img{
+    opacity: 0;
+    animation: fadeInImg 0.7s ease-out 0.5s forwards;
+}
+@keyframes fadeInImg {
+    to {
+        opacity: 1;
+    }
+}
+
