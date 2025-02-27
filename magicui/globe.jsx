@@ -9,8 +9,8 @@ import { cn } from "../lib/utils";
 const MOVEMENT_DAMPING = 1400;
 
 const GLOBE_CONFIG = {
-  width: 100,
-  height: 100,
+  width: 800,
+  height: 800,
   onRender: () => {},
   devicePixelRatio: 2,
   phi: 0,

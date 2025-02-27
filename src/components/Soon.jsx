@@ -24,7 +24,7 @@ function Soon() {
                 </div> */}
 
                 <div className="heroImg soonImg">
-                    <img src="/src\assets\hero\6.1.jpg" alt="image" />
+                    <img src="..\hero\6.1.jpg" alt="image" />
                 </div>
 
                 <div className="soonGrid">

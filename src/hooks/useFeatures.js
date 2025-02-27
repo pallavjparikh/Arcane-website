@@ -6,7 +6,7 @@ const useFeatures = () => {
         {
             title: "Custimized AI Development",
             description: "Build custom AI models tailored to your business needs. Arcane AI's intuitive interface and pre-built templates make AI development accessible to everyone.",
-            image: "src/assets/hero/5.1.jpg"
+            image: "../hero/5.1.jpg"
         },
         {
             title: "Automated Threat Response",

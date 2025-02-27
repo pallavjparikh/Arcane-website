@@ -46,10 +46,10 @@ function Hero() {
         <div className="logos" style={{ zIndex: 1, position: "relative" }}>
           <center><span style={span}>Used by great teams</span></center>
           <div>
-            <img src="src\assets\hero\cybrib.jpg" alt="image" />
-            <img src="/src\assets\hero\cs.jpg" alt="image" />
-            <img src="/src\assets\hero\gdg.webp" alt="image" />
-            <img src="/src\assets\hero\ava.png"alt="image" />
+            <img src="..\hero\cybrib.jpg" alt="image" />
+            <img src="..\hero\cs.jpg" alt="image" />
+            <img src="..\hero\gdg.webp" alt="image" />
+            <img src="..\hero\ava.png"alt="image" />
           </div>
         </div>
       </div>
