@@ -9,10 +9,15 @@ function Join() {
             <center><p className='subHead' style={{ position: "relative", zIndex: 2 }}></p></center>
             <center><p className="heading" style={{ position: "relative", zIndex: 2 }}>Get Started Today <br /><span style={{ color: "#ffffffb3" }}></span></p></center>
 
-            <form className='list'> 
-                <input type="email" placeholder='Enter your email' required />
-                <button type="submit">Contact Us</button>
-            </form>
+                  
+            {/* <iframe className='joinBlock' 
+                src='https://forms.zohopublic.com/pallavthear1/form/ContactUS/formperma/6d1VdF1DMut7JWgRmVHic_kVY8G_BWj__KmElql28tc'
+                width="80%" 
+                align="center"
+                height="500px" 
+                style={{ border: "none", marginTop: "20px" }}
+                title="Join Form"
+            ></iframe> */}
         </div>
     )
 }

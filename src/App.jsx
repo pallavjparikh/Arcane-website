@@ -8,13 +8,12 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Hero from './components/Hero';
 import Features from './components/Features';
-import Solutions from './components/Solutions';
+//import Solutions from './components/Solutions';
 import Soon from './components/Soon';
 import Team from './components/Team';
 import Faq from './components/Faq';
 import Join from './components/Join';
 import Footer from './components/Footer';
-import CustomAiPage from './components/CustomAiPage';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -44,7 +43,7 @@ function App() {
       <Sidebar effect={sidebar} click={sidebarFunc} />
       <Hero />
       <Features />
-      <Solutions />
+      {/* <Solutions /> */}
       <Soon />
       <Team />
       <Faq />

@@ -1,24 +1,19 @@
+
 .Block {
     position: relative;
     margin: 0px auto 0px auto;
     padding: 110px 80px;
+    
 }
 
 .Block.teamBlock, 
 .Block.faqBlock {
     background: linear-gradient(180deg, #161418, #0a080c 40%);
+    
 }
 
 .features {
     margin-top: 90px;
-    transition: transform 0.3s ease;
-}
-.feature:hover {
-    transform: scale(1.15); /* Slightly scale and tilt */
-    transition: transform 0.3s ease;
-    
-
-
 }
 
 .features .feature:not(:nth-child(1)) {
@@ -38,6 +33,7 @@
     max-width: 1100px;
     gap: 80px;
     z-index: 1;
+  
 }
 
 .featureImg {

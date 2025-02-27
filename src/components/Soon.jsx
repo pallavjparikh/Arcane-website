@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { forwardRef, useRef } from "react";
+"use client";
+ 
 
+ 
+import { cn } from "../lib/utils"; 
+import { AnimatedBeam } from "../magicui/animated-beam";
 // CSS
 import "../styles/Soon.css";
 
@@ -19,7 +24,7 @@ function Soon() {
                 </div> */}
 
                 <div className="heroImg soonImg">
-                    <img src="/hero/1.1.jpg" alt="image" />
+                    <img src="/src\assets\hero\6.1.jpg" alt="image" />
                 </div>
 
                 <div className="soonGrid">

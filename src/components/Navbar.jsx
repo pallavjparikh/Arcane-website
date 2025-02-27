@@ -64,7 +64,7 @@ function Navbar({ click }) {
                     </li> */}
                     <li><a href="#team">Team</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="https://www.gitbook.com/" target='_blank'>Docs</a></li>
+                    {/* <li><a href="https://www.gitbook.com/" target='_blank'>Docs</a></li> */}
                 </ul>
                 <div className="toggle">
                     <a href="#join" className="wait">Join</a>

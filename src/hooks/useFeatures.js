@@ -4,9 +4,9 @@ import { useState } from 'react';
 const useFeatures = () => {
     const [features] = useState([
         {
-            title: "Secure Data Collaboration",
-            description: "Share AI-powered insights and collaborate on data analysis securely within your team. Arcane AI's built-in access controls ensure data privacy and compliance.",
-            image: "/hero/1.1.jpg"
+            title: "Custimized AI Development",
+            description: "Build custom AI models tailored to your business needs. Arcane AI's intuitive interface and pre-built templates make AI development accessible to everyone.",
+            image: "src/assets/hero/5.1.jpg"
         },
         {
             title: "Automated Threat Response",

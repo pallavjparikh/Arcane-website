@@ -12,7 +12,7 @@ function Solutions() {
             <div className="sectionHead">
                 <p className='subHead'>Solutions</p>
                 <p className="heading blockHeading" style={{ maxWidth: "420px" }}>There is something for every team</p>
-                <p className="desc blockDesc" style={{ maxWidth: "520px" }}>Explore how Arcane AI empowers different teams within your organization, unlocking insights from data and strengthening security</p>
+                <p className="desc blockDesc" style={{ maxWidth: "520px" }}>Discover how the platform meets your team's unique needs and helps you solve even most challenging tasks.</p>
             </div>
 
             <div className="solutions">

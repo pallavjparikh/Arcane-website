@@ -1,6 +1,7 @@
 import React from 'react';
 import useFeatures from '../hooks/useFeatures';
 import "../styles/Features.css";
+import { twMerge } from "tailwind-merge";
 
 function Features() {
     const features = useFeatures();
