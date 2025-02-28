@@ -1,0 +1,202 @@
+.Navbar {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: 4;
+    padding: 0px 80px;
+    opacity: 1;
+    transform: translateY(-4px); /* Start above its normal position */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for both properties */
+}
+.Navbar.show {
+    opacity: 1;
+    transform: translateY(0); /* Move to its normal position */
+}
+
+nav {
+    background: #0a080cb3;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border: 1px solid #ffffff0f;
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    border-radius: 1rem;
+    max-width: 1100px;
+    margin-top: 20px;
+}
+
+.wait {
+    background-color: #693def;
+    border-radius: .5rem;
+    font-size: 14.5px;
+    padding: 12.5px 15px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;   
+
+    &:hover {
+        background-color: #120635;
+    }
+}
+
+.wait:hover {
+    background-color: #120635;
+    transform: scale(1.15); /* Slightly enlarge on hover */
+}
+
+.links .wait {
+    font-size: 16px;
+}
+
+.links .wait:nth-child(2) {
+    background-color: #18181B;
+    border: 1px solid #27272A;
+}
+
+nav ul {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+nav ul li a {
+    position: relative;
+    color: white; /* Or your link color */
+    text-decoration: none;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Adjust distance from text as needed */
+    left: 0;
+    width: 0;
+    height: 2px; /* Underline thickness */
+    background-color: white; /* Or your underline color */
+    transition: width 0.3s ease; /* Smooth width change */
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+nav ul.menu {
+    position: fixed; /* Ensure it overlays */
+    top: 0;
+    left: -100%; /* Hide off-screen initially */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    flex-direction: column; /* Stack menu items vertically */
+    background-color: #0a080cb3;
+    gap: 30px;
+    padding-top: 100px; /* Give space at top */
+    transition: left 0.3s ease; /* Slide-in animation */
+    z-index: 5; /* Ensure it's above other content */
+}
+nav ul.menu.open {
+    left: 0; /* Slide in from left */
+}
+
+
+nav ul li a:hover {
+    color: darkgray;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.toggle i {
+    display: none;
+    cursor: pointer;
+}
+
+@media(max-width: 1100px) {
+    nav ul {
+        display: none;
+    }
+
+    .toggle i {
+        display: flex;
+    }
+}
+
+@media(max-width: 670px) {
+    .Navbar {
+        padding: 0px 50px;
+    }
+}
+
+@media(max-width: 460px) {
+    nav .wait {
+        display: none;
+    }
+
+    nav {
+        padding: 24.3px 20px;
+    }
+
+    .Navbar {
+        padding: 0px 35px;
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #0a080cb3; 
+    backdrop-filter: blur(10px); 
+    border: 1px solid #ffffff0f; 
+    min-width: 200px;
+    z-index: 1000;
+    padding: 0.75rem 0;
+    border-radius: 0.5rem;
+    list-style: none;
+   
+    transform: translateY(-50%);
+    margin-top: 4rem; /* Add some space from the trigger */
+}
+
+.dropdown-menu li {
+    padding: 0.75rem 1.5rem;
+  
+}
+
+.dropdown-menu li a {
+    color: white; /* Matching your nav links */
+    text-decoration: none;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease;
+   
+}
+
+.dropdown-menu li a:hover {
+    color: #693def; /* Using your primary color */
+}
+
+.dropdown-menu li a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #693def; /* Using your primary color */
+    transition: width 0.3s ease;
+}
+
+.dropdown-menu li a:hover::before {
+    width: 100%;
+}
