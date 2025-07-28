@@ -1,6 +1,6 @@
 
 .Hero {
-    background: linear-gradient(180deg, #0f0d12, #0a080c 40%);
+    background: transparent;
     padding: 200px 80px 110px 80px;
     position: relative;
     min-height: 100vh;

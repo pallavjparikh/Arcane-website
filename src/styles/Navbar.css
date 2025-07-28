@@ -48,6 +48,7 @@ nav {
     padding: 12.5px 15px;
     color: white;
     cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;   
 
     &:hover {
@@ -78,7 +79,15 @@ nav ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
+nav ul li {
+    list-style: none;
+}
+
 nav ul li a {
     position: relative;
     color: white; /* Or your link color */
@@ -115,11 +124,12 @@ nav ul.menu {
     padding-top: 100px; /* Give space at top */
     transition: left 0.3s ease; /* Slide-in animation */
     z-index: 5; /* Ensure it's above other content */
+    list-style: none;
 }
+
 nav ul.menu.open {
     left: 0; /* Slide in from left */
 }
-
 
 nav ul li a:hover {
     color: darkgray;

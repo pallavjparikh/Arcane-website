@@ -12,6 +12,7 @@ import Faq from './components/Faq';
 import Join from './components/Join';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
+import MathGrid from './components/MathGrid';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -69,6 +70,9 @@ function App() {
         animate={{ opacity: isLoading ? 0 : 1 }}
         transition={{ duration: 0.8 }}
       >
+        {/* Math Grid Background */}
+        <MathGrid />
+        
         {/* Always visible navbar with enhanced styling when scrolled */}
         <motion.div 
           className={`Navbar ${scrolled ? 'scrolled' : ''}`}
