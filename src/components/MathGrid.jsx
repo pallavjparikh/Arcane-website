@@ -16,6 +16,11 @@ const MathGrid = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
+    // Check if device is mobile
+    const isMobile = () => {
+      return window.innerWidth <= 768;
+    };
+
     // Extended math calculations and numbers
     const mathElements = [
       { text: '∑', x: 0, y: 0, speed: 0.5 },
@@ -279,13 +284,103 @@ const MathGrid = () => {
       { text: '⋿', x: 0, y: 0, speed: 0.4 }
     ];
 
-    // Initialize positions with more density
-    mathElements.forEach((element, index) => {
-      element.x = Math.random() * canvas.width;
-      element.y = Math.random() * canvas.height;
-      element.opacity = 0.15; // Fixed opacity - no blinking
-      element.size = Math.random() * 25 + 20; // Slightly larger size range
-    });
+    // Initialize positions with mobile responsiveness
+    const initializeElements = () => {
+      const mobile = isMobile();
+      const totalElements = mobile ? 30 : mathElements.length; // Reduce to 30 on mobile
+      
+      // Clear existing elements
+      mathElements.length = 0;
+      
+      // Add elements based on device
+      const baseElements = [
+        { text: '∑', x: 0, y: 0, speed: 0.5 },
+        { text: '∫', x: 0, y: 0, speed: 0.3 },
+        { text: 'π', x: 0, y: 0, speed: 0.4 },
+        { text: '∞', x: 0, y: 0, speed: 0.6 },
+        { text: '√', x: 0, y: 0, speed: 0.2 },
+        { text: '∂', x: 0, y: 0, speed: 0.7 },
+        { text: '∇', x: 0, y: 0, speed: 0.4 },
+        { text: 'λ', x: 0, y: 0, speed: 0.5 },
+        { text: 'σ', x: 0, y: 0, speed: 0.3 },
+        { text: 'μ', x: 0, y: 0, speed: 0.6 },
+        { text: 'α', x: 0, y: 0, speed: 0.4 },
+        { text: 'β', x: 0, y: 0, speed: 0.5 },
+        { text: 'γ', x: 0, y: 0, speed: 0.3 },
+        { text: 'δ', x: 0, y: 0, speed: 0.6 },
+        { text: 'ε', x: 0, y: 0, speed: 0.4 },
+        { text: 'θ', x: 0, y: 0, speed: 0.5 },
+        { text: 'φ', x: 0, y: 0, speed: 0.3 },
+        { text: 'ψ', x: 0, y: 0, speed: 0.6 },
+        { text: 'ω', x: 0, y: 0, speed: 0.4 },
+        { text: 'ξ', x: 0, y: 0, speed: 0.5 },
+        { text: 'η', x: 0, y: 0, speed: 0.3 },
+        { text: 'ζ', x: 0, y: 0, speed: 0.6 },
+        { text: 'ι', x: 0, y: 0, speed: 0.4 },
+        { text: 'κ', x: 0, y: 0, speed: 0.5 },
+        { text: 'ν', x: 0, y: 0, speed: 0.3 },
+        { text: 'ρ', x: 0, y: 0, speed: 0.6 },
+        { text: 'τ', x: 0, y: 0, speed: 0.4 },
+        { text: 'υ', x: 0, y: 0, speed: 0.5 },
+        { text: 'χ', x: 0, y: 0, speed: 0.3 },
+        { text: 'ς', x: 0, y: 0, speed: 0.6 },
+        { text: 'Γ', x: 0, y: 0, speed: 0.4 },
+        { text: 'Δ', x: 0, y: 0, speed: 0.5 },
+        { text: 'Θ', x: 0, y: 0, speed: 0.3 },
+        { text: 'Λ', x: 0, y: 0, speed: 0.6 },
+        { text: 'Ξ', x: 0, y: 0, speed: 0.4 },
+        { text: 'Π', x: 0, y: 0, speed: 0.5 },
+        { text: 'Σ', x: 0, y: 0, speed: 0.3 },
+        { text: 'Φ', x: 0, y: 0, speed: 0.6 },
+        { text: 'Ψ', x: 0, y: 0, speed: 0.4 },
+        { text: 'Ω', x: 0, y: 0, speed: 0.5 },
+        { text: '∅', x: 0, y: 0, speed: 0.3 },
+        { text: '∈', x: 0, y: 0, speed: 0.6 },
+        { text: '∉', x: 0, y: 0, speed: 0.4 },
+        { text: '∋', x: 0, y: 0, speed: 0.5 },
+        { text: '∌', x: 0, y: 0, speed: 0.3 },
+        { text: '⊂', x: 0, y: 0, speed: 0.6 },
+        { text: '⊃', x: 0, y: 0, speed: 0.4 },
+        { text: '⊆', x: 0, y: 0, speed: 0.5 },
+        { text: '⊇', x: 0, y: 0, speed: 0.3 },
+        { text: '⊕', x: 0, y: 0, speed: 0.6 },
+        { text: '⊗', x: 0, y: 0, speed: 0.4 },
+        { text: '⊥', x: 0, y: 0, speed: 0.5 },
+        { text: '⊤', x: 0, y: 0, speed: 0.3 },
+        { text: '∨', x: 0, y: 0, speed: 0.6 },
+        { text: '∧', x: 0, y: 0, speed: 0.4 },
+        { text: '⇒', x: 0, y: 0, speed: 0.5 },
+        { text: '⇔', x: 0, y: 0, speed: 0.3 },
+        { text: '∀', x: 0, y: 0, speed: 0.6 },
+        { text: '∃', x: 0, y: 0, speed: 0.4 },
+        { text: '∄', x: 0, y: 0, speed: 0.5 },
+        { text: '∴', x: 0, y: 0, speed: 0.3 },
+        { text: '∵', x: 0, y: 0, speed: 0.6 },
+        { text: '∝', x: 0, y: 0, speed: 0.4 },
+        { text: '≈', x: 0, y: 0, speed: 0.5 },
+        { text: '≠', x: 0, y: 0, speed: 0.3 },
+        { text: '≤', x: 0, y: 0, speed: 0.6 },
+        { text: '≥', x: 0, y: 0, speed: 0.4 },
+        { text: '≪', x: 0, y: 0, speed: 0.5 },
+        { text: '≫', x: 0, y: 0, speed: 0.3 },
+        { text: '≡', x: 0, y: 0, speed: 0.6 },
+        { text: '≅', x: 0, y: 0, speed: 0.4 },
+        { text: '≃', x: 0, y: 0, speed: 0.5 },
+        { text: '≄', x: 0, y: 0, speed: 0.3 },
+      ];
+
+      // Add elements to mathElements array
+      for (let i = 0; i < totalElements; i++) {
+        const element = { ...baseElements[i % baseElements.length] };
+        element.x = Math.random() * canvas.width;
+        element.y = Math.random() * canvas.height;
+        element.opacity = mobile ? 0.08 : 0.15; // Lower opacity on mobile
+        element.size = mobile ? (Math.random() * 15 + 12) : (Math.random() * 25 + 20); // Smaller size on mobile
+        mathElements.push(element);
+      }
+    };
+
+    initializeElements();
 
     // Animation loop
     const animate = () => {
@@ -295,7 +390,7 @@ const MathGrid = () => {
       ctx.strokeStyle = 'rgba(153, 138, 251, 0.03)';
       ctx.lineWidth = 1;
       
-      const gridSize = 50;
+      const gridSize = isMobile() ? 80 : 50; // Larger grid spacing on mobile
       for (let x = 0; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
@@ -328,8 +423,17 @@ const MathGrid = () => {
 
     animate();
 
+    // Handle resize to reinitialize elements
+    const handleResize = () => {
+      resizeCanvas();
+      initializeElements();
+    };
+
+    window.addEventListener('resize', handleResize);
+
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
