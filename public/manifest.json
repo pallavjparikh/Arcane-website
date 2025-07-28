@@ -1,0 +1,27 @@
+{
+  "name": "Arcane AI - Custom AI Development & Network Security",
+  "short_name": "Arcane AI",
+  "description": "Build custom AI solutions and protect your network from threats – no coding required. Arcane AI provides data intelligence and AI-driven security for businesses.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0d12",
+  "theme_color": "#998afb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/Arcane.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Arcane.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en",
+  "dir": "ltr"
+} 

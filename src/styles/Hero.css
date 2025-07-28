@@ -1,239 +1,179 @@
 
 .Hero {
-    background: linear-gradient(180deg, #0f0d12, #0a080c 40%); /* Changed gradient */
+    background: linear-gradient(180deg, #0f0d12, #0a080c 40%);
     padding: 200px 80px 110px 80px;
-    position: relative; /* For background animation */
-    min-height: 100vh; /* Make it full viewport height */
+    position: relative;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center content */
-    align-items: center; /* Horizontally center content */
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    overflow: hidden; /* Hide overflow for animations */
+    overflow: hidden;
 }
 
-@keyframes fadeInHero {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-    
-        transform: translateY(0px);
-    }
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.globe {
-    position: absolute;
-  
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
-
-}
-.heroBg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the entire container */
-}
-.heroBlock::before,
-.Block.featuresBlock::before,
-.Block.solutionsBlock::before,
-.Block.joinBlock::before {
-    background: linear-gradient(to top, #161418, transparent);
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    bottom: 0%;
-    left: 0%;
+.hero-content header {
+    margin-bottom: 2rem;
 }
 
-.Block.featuresBlock::before {
-    height: 500px;
-}
 .subHead,
 .heading,
 .desc,
 .links {
-    opacity: 0;
-    transform: translateY(20px);
     margin-bottom: 15px;
-    animation: fadeInUp 0.7s ease-out forwards; /* Common animation */
+    animation: fadeInUp 0.7s ease-out forwards;
 }
+
 .subHead {
+    font-size: 18px;
+    font-weight: 600;
     color: #998afb;
-    text-transform: uppercase;
-    font-size: 14px;
-    animation-delay: 0.2s;
+    margin-bottom: 20px;
 }
 
 .heading {
-    font-size: 64px;
-    margin-top: 25px;
-    font-weight: 550;
-    line-height: 1.05em;
-    animation-delay: 0.4s;
-}
-
-.blockHeading {
-    font-size: 48px;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    background: linear-gradient(45deg, #ffffff, #998afb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .desc {
-    color: rgb(255, 255, 255);
-    font-weight: 550;
-    max-width: 635px;
-    font-size: 18px;
-    line-height: 1.5em;
-    margin: 18px 0px;
-    animation-delay: 0.6s;
-}
-
-.blockDesc {
-    margin: 18px 0px 0px 0px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ffffffb3;
+    margin-bottom: 35px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .links {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 15px;
-    padding-top: 18px;
-    animation-delay: 0.8s;
-}
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.heading {
-    font-size: 64px;
-    opacity: 1;
-    font-weight: 550;
-    line-height: 1.05em;
-    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-
-
-
-.links.soonLinks {
-    justify-content: initial;
+.links a {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #998afb, #7c3aed);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(153, 138, 251, 0.3);
 }
 
-.heroImg {
-    display: flex;
+.links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(153, 138, 251, 0.4);
+}
+
+.logos {
     position: relative;
-    max-width: 1100px;
-    margin: 90px 0px;
+    z-index: 10;
+    margin-top: 3rem;
 }
 
-.heroImg.soonImg {
-    max-width: 100%;
+.logos p {
+    margin-bottom: 1rem;
+    color: #ffffffb3;
 }
 
-.heroImg::before {
-    background: linear-gradient(to top, #0a080c, transparent);
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 0%;
-    left: 0%;
-}
-
-.heroImg img {
-    width: 100%;
-}
-
-.logos div {
+.partner-logos {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 35px;
     gap: 65px;
-
 }
 
-.logos div img {
+.partner-logos img {
     width: 80px;
     height: 80px;
+    transition: transform 0.3s ease;
 }
 
-@media(max-width: 980px) {
-    .heading {
-        font-size: 55px;
-    }
+.partner-logos img:hover {
+    transform: scale(1.1);
 }
 
-@media(max-width: 900px) {
-    .logos div {
-        gap: 45px;
-    }
-
-    .logos div img {
-        width: 115px;
-    }
-}
-
-@media(max-width: 670px) {
-    .heading {
-        font-size: 45px;
-    }
-
-    .Hero {
-        padding: 200px 50px 110px 50px;
-    }
-}
-
-@media(max-width: 500px) {
-    .heading {
-        font-size: 40px;
-    }
-}
-
-@media(max-width: 460px) {
-    .Hero {
-        padding: 200px 35px 110px 35px;
-    }
-}
-
-    .logos img {
+@keyframes fadeInUp {
+    from {
         opacity: 0;
-        animation: fadeInLogos 0.5s ease forwards;
+        transform: translateY(20px);
     }
-
-    .logos img:nth-child(1) {
-        animation-delay: 0.5s;
-    }
-
-    .logos img:nth-child(2) {
-        animation-delay: 0.7s;
-    }
-
-    .logos img:nth-child(3) {
-        animation-delay: 0.9s;
-    }
-
-    .logos img:nth-child(4) {
-        animation-delay: 1.1s;
-    }
-    @keyframes fadeInLogos {
-        to {
-            opacity: 1;
-        }
-    }
-.heroImg img{
-    opacity: 0;
-    animation: fadeInImg 0.7s ease-out 0.5s forwards;
-}
-@keyframes fadeInImg {
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Hero {
+        padding: 150px 40px 80px 40px;
+    }
+    
+    .heading {
+        font-size: 2.5rem;
+    }
+    
+    .desc {
+        font-size: 1.1rem;
+    }
+    
+    .partner-logos {
+        gap: 40px;
+    }
+    
+    .partner-logos img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Hero {
+        padding: 120px 20px 60px 20px;
+    }
+    
+    .heading {
+        font-size: 2rem;
+    }
+    
+    .desc {
+        font-size: 1rem;
+    }
+    
+    .links a {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .partner-logos {
+        gap: 30px;
+    }
+    
+    .partner-logos img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 
