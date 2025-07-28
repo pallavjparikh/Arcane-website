@@ -40,25 +40,6 @@ html {
   background: #7c3aed;
 }
 
-/* Navbar animations */
-.Navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background: rgba(15, 13, 18, 0.8);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  padding: 0;
-}
-
-.Navbar.scrolled {
-  background: rgba(15, 13, 18, 0.95);
-  backdrop-filter: blur(15px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
 /* Optimized interactive elements */
 .interactive {
   transition: all 0.2s ease;

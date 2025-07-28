@@ -111,7 +111,7 @@
     }
     
     .contact-form {
-        height: 500px;
+        height: 600px; /* Keep original height on tablets */
     }
 }
 
@@ -129,7 +129,8 @@
     }
     
     .contact-form {
-        height: 450px;
+        height: 700px; /* Increase height on mobile to prevent hiding buttons */
+        max-width: 100%;
     }
 }
 

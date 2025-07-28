@@ -46,7 +46,7 @@ function Navbar({ click }) {
         <div className='Navbar'>
             <nav>
                 <a href="#" style={{ display: "flex" }}>
-                    <img src="/logo.svg" alt="logo" style={{ width: 150 }} />
+                    <img src="/logo.svg" alt="logo" style={{ width: 120 }} />
                 </a>
                 <ul>
                     <li><a href="#features">Features</a></li>
