@@ -1,0 +1,8 @@
+# Handle client-side routing
+/*    /index.html   200
+
+# Redirect www to non-www (if needed)
+# www.thearcaneai.com/*    https://thearcaneai.com/:splat    301
+
+# Redirect old domain if any
+# olddomain.com/*    https://thearcaneai.com/:splat    301
